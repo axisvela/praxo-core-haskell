@@ -5,18 +5,17 @@ embeddable, MIT-licensed agent execution kernel with policy controls,
 human-in-the-loop approval, checkpoints, events, and tool calling.
 
 - Package: `praxo-core` (`0.2.0`)
-- Registry: source release; Hackage pending
+- Registry: Hackage (pending)
+- Install: `cabal install praxo-core`
 - Documentation: https://axisvela.github.io/praxo-core/languages/haskell/
+- Mirror repository: https://github.com/axisvela/praxo-core-haskell
 - Canonical source: https://github.com/axisvela/praxo-core/tree/main/language/haskell
 - Release index: https://axisvela.github.io/praxo-core/languages/registry-status/
 
-This repository is a discovery mirror of the canonical Haskell source. The
-monorepo remains the source of truth and the release workflow source. Shared
-conformance vectors are included under `spec/`.
-
-## Install or build
-
-Source release. Build from `language/haskell`; Hackage upload is pending.
+This repository is a discovery mirror of the canonical Haskell source.
+The monorepo remains the source of truth and the release workflow source. Shared
+conformance vectors are included under `spec/`, so the implementation can be
+built and tested here.
 
 ## Verify
 
