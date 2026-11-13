@@ -4,7 +4,7 @@ Dedicated repository for the Haskell implementation of PRAXO-CORE: an
 embeddable, MIT-licensed agent execution kernel with policy controls,
 human-in-the-loop approval, checkpoints, events, and tool calling.
 
-- Package: `praxo-core` (`0.4.0`)
+- Package: `praxo-core` (`0.5.0`)
 - Registry: Hackage
 - Install: `cabal install praxo-core`
 - Documentation: https://axisvela.github.io/praxo-core/languages/haskell/
