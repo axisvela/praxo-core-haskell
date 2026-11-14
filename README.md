@@ -8,6 +8,7 @@ human-in-the-loop approval, checkpoints, events, and tool calling.
 - Registry: Hackage
 - Install: `cabal install praxo-core`
 - Documentation: https://axisvela.github.io/praxo-core/languages/haskell/
+- Examples: https://github.com/axisvela/praxo-core-haskell/tree/main/language/haskell/examples
 - Mirror repository: https://github.com/axisvela/praxo-core-haskell
 - Canonical source: https://github.com/axisvela/praxo-core/tree/main/language/haskell
 - Release index: https://axisvela.github.io/praxo-core/languages/registry-status/
