@@ -9,9 +9,9 @@ PRAXO-CORE is an embeddable, MIT-licensed agent framework. This package is its n
 | Package | `praxo-core` |
 | Registry | [Hackage](https://hackage.haskell.org/package/praxo-core-0.5.0) |
 | Install | `cabal install praxo-core` |
-| Source version | `0.5.0` |
+| Source version | `0.6.0` |
 | Published version | `0.5.0` |
-| Source tag | `haskell/v0.5.0` |
+| Source tag | `haskell/v0.6.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/haskell/ |
@@ -70,8 +70,10 @@ Runnable examples live under [`language/haskell/examples`](language/haskell/exam
 | Example | What it shows |
 | --- | --- |
 | [checkpoint](language/haskell/examples/checkpoint) | This example uses the Haskell Core checkpoint allowlist for a registered payload round trip. |
+| [consumer](language/haskell/examples/consumer) | This starter uses a deterministic model and an in-memory tool. It does not use the network or a model service. Run it from the repository root with GHC installed: |
 | [event-sink](language/haskell/examples/event-sink) | This example uses Haskell Core sink composition to fan out events and filter the tool-only stream. |
 | [identity-policy](language/haskell/examples/identity-policy) | This example binds a trusted principal to policy decisions and rejects missing, role-mismatched, and tenant-mismatched actions. |
+| [live-model](language/haskell/examples/live-model) | This example connects the Haskell Core to an OpenAI-compatible endpoint through `Praxo.OpenAICompatible`, registers a `get_time(zone)` tool with a small JSON Schema, and restric... |
 | [mcp](language/haskell/examples/mcp) | This example uses a caller-owned in-process transport with the Haskell MCP client. |
 | [provider-fallback](language/haskell/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
 | [retry](language/haskell/examples/retry) | This example retries a transient failure with a bounded attempt count and keeps the exhausted failure state. |
