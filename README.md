@@ -9,9 +9,9 @@ PRAXO-CORE is an embeddable, MIT-licensed agent framework. This package is its n
 | Package | `praxo-core` |
 | Registry | [Hackage](https://hackage.haskell.org/package/praxo-core-0.6.1) |
 | Install | `cabal install praxo-core` |
-| Source version | `0.6.1` |
+| Source version | `0.7.0` |
 | Published version | `0.6.1` |
-| Source tag | `haskell/v0.6.1` |
+| Source tag | `haskell/v0.7.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/haskell/ |
