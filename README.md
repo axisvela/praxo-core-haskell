@@ -78,6 +78,7 @@ Runnable examples live under [`language/haskell/examples`](language/haskell/exam
 | [provider-fallback](language/haskell/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
 | [retry](language/haskell/examples/retry) | This example retries a transient failure with a bounded attempt count and keeps the exhausted failure state. |
 | [service](language/haskell/examples/service) | This example defines a transport-neutral request handler with health, principal, and run cases. |
+| [session-checkpoint](language/haskell/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns with the Haskell Core `runAgent` loop and checkpoint allowlist helpers. It uses a teaching in-memor... |
 | [streaming](language/haskell/examples/streaming) | This example accumulates streamed chunks and checks that they reconstruct the final output. |
 | [structured-output](language/haskell/examples/structured-output) | This example validates a final JSON answer against a schema and rejects invalid output. |
 
