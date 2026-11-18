@@ -1,6 +1,6 @@
 # PRAXO-CORE for Haskell
 
-PRAXO-CORE is an embeddable, MIT-licensed agent framework. This package is its native Haskell Core. It implements all eleven declared vector groups and does not call Go or another Core. It includes a native callback-based agent loop with tools, policy hooks, typed events, memory, checkpoints, context budgets, middleware, JSON Schema validation, plugin manifest parsing, and runtime helpers.
+PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This package is its native Haskell Core. It implements all eleven declared vector groups and does not call Go or another Core. It includes a native callback-based agent loop with tools, policy hooks, typed events, memory, checkpoints, context budgets, middleware, JSON Schema validation, plugin manifest parsing, and runtime helpers.
 
 ## At a glance
 
@@ -69,6 +69,7 @@ Runnable examples live under [`language/haskell/examples`](language/haskell/exam
 
 | Example | What it shows |
 | --- | --- |
+| [advanced-delegation](language/haskell/examples/advanced-delegation) | Application-level parent/child delegation plus six governance negative checks. |
 | [checkpoint](language/haskell/examples/checkpoint) | This example uses the Haskell Core checkpoint allowlist for a registered payload round trip. |
 | [consumer](language/haskell/examples/consumer) | This starter uses a deterministic model and an in-memory tool. It does not use the network or a model service. Run it from the repository root with GHC installed: |
 | [event-sink](language/haskell/examples/event-sink) | This example uses Haskell Core sink composition to fan out events and filter the tool-only stream. |
@@ -77,6 +78,7 @@ Runnable examples live under [`language/haskell/examples`](language/haskell/exam
 | [live-model](language/haskell/examples/live-model) | This example connects the Haskell Core to an OpenAI-compatible endpoint through `Praxo.OpenAICompatible`, registers a `get_time(zone)` tool with a small JSON Schema, and restric... |
 | [mcp](language/haskell/examples/mcp) | This example uses a caller-owned in-process transport with the Haskell MCP client. |
 | [provider-fallback](language/haskell/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
+| [representative-chain](language/haskell/examples/representative-chain) | Deterministic representative chain covering MCP record, final-argument authorization, governed child delegation, OTel/Harmovela events, and an edited denial with zero effects. |
 | [retry](language/haskell/examples/retry) | This example retries a transient failure with a bounded attempt count and keeps the exhausted failure state. |
 | [service](language/haskell/examples/service) | This example defines a transport-neutral request handler with health, principal, and run cases. |
 | [session-checkpoint](language/haskell/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns with the Haskell Core `runAgent` loop and checkpoint allowlist helpers. It uses a teaching in-memor... |
