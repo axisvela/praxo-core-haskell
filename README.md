@@ -9,9 +9,9 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This package is it
 | Package | `praxo-core` |
 | Registry | [Hackage](https://hackage.haskell.org/package/praxo-core-0.7.1) |
 | Install | `cabal install praxo-core` |
-| Source version | `0.7.1` |
+| Source version | `0.8.0` |
 | Published version | `0.7.1` |
-| Source tag | `haskell/v0.7.1` |
+| Source tag | `haskell/v0.8.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/haskell/ |
@@ -22,7 +22,6 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This package is it
 - OpenAI-compatible model: native (transport seam)
 - Anthropic model: native (transport seam)
 - Gemini model: native (transport seam)
-- Process plugin host: native
 - MCP client: native (transport seam)
 - Harmovela sink: native (transport seam)
 - OpenTelemetry sink: native (transport seam)
@@ -56,9 +55,8 @@ See the [full Haskell README](language/haskell/README.md) for complete installat
 | Capability | Status | Detail |
 | --- | --- | --- |
 | OpenAI-compatible model | native (transport seam) | Caller supplies `Transport`; no bundled HTTP client; SSE streaming reassembly |
-| Anthropic model | native (transport seam) | `Praxo.Anthropic`; caller supplies transport; Anthropic SSE streaming |
-| Gemini model | native (transport seam) | `Praxo.Gemini`; caller supplies transport; Gemini SSE streaming |
-| Process plugin host | native | `Praxo.PluginProcess`; JSON-Lines stdio, token auth, health, timeout |
+| Anthropic model | native (transport seam) | `Praxo.Anthropic`; caller supplies transport; `generateAnthropicStream` reassembles Anthropic SSE |
+| Gemini model | native (transport seam) | `Praxo.Gemini`; caller supplies transport; `generateGeminiStream` reassembles Gemini SSE |
 | MCP client | native (transport seam) | `Praxo.Mcp`; caller supplies `McpTransport` |
 | Harmovela sink | native (transport seam) | `Praxo.Harmovela`; caller supplies transport |
 | OpenTelemetry sink | native (transport seam) | `Praxo.Otel`; caller supplies `OtelTransport` |
