@@ -7,10 +7,10 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This package is it
 | Field | Value |
 | --- | --- |
 | Package | `praxo-core` |
-| Registry | [Hackage](https://hackage.haskell.org/package/praxo-core-0.7.1) |
+| Registry | [Hackage](https://hackage.haskell.org/package/praxo-core-0.8.0) |
 | Install | `cabal install praxo-core` |
 | Source version | `0.8.0` |
-| Published version | `0.7.1` |
+| Published version | `0.8.0` |
 | Source tag | `haskell/v0.8.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
