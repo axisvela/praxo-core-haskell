@@ -12,8 +12,6 @@ PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This package is it
 | Source version | `0.8.0` |
 | Published version | `0.8.0` |
 | Source tag | `haskell/v0.8.0` |
-| Tutorial tag | `haskell/tutorial/v0.1.0` |
-| Examples tag | `haskell/examples/v0.1.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/haskell/ |
