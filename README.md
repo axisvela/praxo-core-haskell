@@ -85,15 +85,9 @@ Runnable examples live under [`language/haskell/examples`](language/haskell/exam
 | [streaming](language/haskell/examples/streaming) | This example accumulates streamed chunks and checks that they reconstruct the final output. |
 | [structured-output](language/haskell/examples/structured-output) | This example validates a final JSON answer against a schema and rejects invalid output. |
 
-## Tutorials and Candidate Scenarios
-
-Start with the [Tutorial Plan](https://axisvela.github.io/praxo-core/getting-started/tutorial-plan/) for delivery standards and the [reference application portfolio](https://axisvela.github.io/praxo-core/project/roadmap/#reference-application-portfolio), review the [100 candidate agent scenarios](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), and browse the [unified Tutorial Catalog](https://axisvela.github.io/praxo-core/getting-started/tutorial-catalog/).
-
-Chinese: [教程计划](https://axisvela.github.io/praxo-core/zh-CN/getting-started/tutorial-plan/), [候选场景](https://axisvela.github.io/praxo-core/zh-CN/getting-started/agent-scenarios/), [教程目录](https://axisvela.github.io/praxo-core/zh-CN/getting-started/tutorial-catalog/).
-
 ## Scenario Tutorials
 
-Scenario-oriented tutorials live under `language/haskell/Tutorial`.
+Scenario-oriented tutorials live under `language/haskell/Tutorial`. Planning context: [Tutorial Plan](https://axisvela.github.io/praxo-core/getting-started/tutorial-plan/), [100 candidate agent scenarios](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), and [Tutorial Catalog](https://axisvela.github.io/praxo-core/getting-started/tutorial-catalog/).
 
 | Path | What it shows |
 | --- | --- |
@@ -102,6 +96,8 @@ Scenario-oriented tutorials live under `language/haskell/Tutorial`.
 | [policy-simulation](language/haskell/Tutorial/policy-simulation) | A bounded first slice of OG-02, not a policy-prediction engine. It simulates a small fixed synthetic population and drafts a review-only sensitivity report using the source Hask... |
 | [rule-dsl](language/haskell/Tutorial/rule-dsl) | A bounded business-rule validation tutorial. It parses a small access-rule DSL into a typed Haskell structure, detects allow/deny conflicts and returns a counterexample. Core co... |
 | [test-generation](language/haskell/Tutorial/test-generation) | A bounded first slice of SE-04, not a test-execution or load-testing service. It generates three bounded tests for a fixed local fixture and records zero executions. No load tar... |
+
+No accepted end-to-end reference application is recorded for this language yet. Candidate goals are tracked in the [Reference Application Portfolio](https://axisvela.github.io/praxo-core/project/roadmap/#reference-application-portfolio).
 
 ## Verify
 
