@@ -97,6 +97,8 @@ Scenario-oriented tutorials live under `language/haskell/Tutorial`. Planning con
 | [rule-dsl](language/haskell/Tutorial/rule-dsl) | A bounded business-rule validation tutorial. It parses a small access-rule DSL into a typed Haskell structure, detects allow/deny conflicts and returns a counterexample. Core co... |
 | [test-generation](language/haskell/Tutorial/test-generation) | A bounded first slice of SE-04, not a test-execution or load-testing service. It generates three bounded tests for a fixed local fixture and records zero executions. No load tar... |
 
+## Reference Applications
+
 No accepted end-to-end reference application is recorded for this language yet. Candidate goals are tracked in the [Reference Application Portfolio](https://axisvela.github.io/praxo-core/project/roadmap/#reference-application-portfolio).
 
 ## Verify
