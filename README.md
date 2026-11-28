@@ -1,6 +1,6 @@
 # PRAXO-CORE for Haskell
 
-PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This package is its native Haskell Core. It implements all eleven declared vector groups and does not call Go or another Core. It includes a native callback-based agent loop with tools, policy hooks, typed events, memory, checkpoints, context budgets, middleware, JSON Schema validation, plugin manifest parsing, and runtime helpers.
+PRAXO-CORE (also written praxocore) is an embeddable, MIT-licensed agent framework. PRAXO-CORE is an embeddable, MIT-licensed AI agent framework. This package is its native Haskell Core. It implements all eleven declared vector groups and does not call Go or another Core. It includes a native callback-based agent loop with tools, policy hooks, typed events, memory, checkpoints, context budgets, middleware, JSON Schema validation, plugin manifest parsing, and runtime helpers.
 
 ## At a glance
 
@@ -76,13 +76,13 @@ Runnable examples live under [`language/haskell/examples`](language/haskell/exam
 | [event-sink](language/haskell/examples/event-sink) | This example uses Haskell Core sink composition to fan out events and filter the tool-only stream. |
 | [hitl](language/haskell/examples/hitl) | This example demonstrates a write tool that requires human approval: |
 | [identity-policy](language/haskell/examples/identity-policy) | This example binds a trusted principal to policy decisions and rejects missing, role-mismatched, and tenant-mismatched actions. |
-| [live-model](language/haskell/examples/live-model) | This example connects the Haskell Core to an OpenAI-compatible endpoint through `Praxo.OpenAICompatible`, registers a `get_time(zone)` tool with a small JSON Schema, and restric... |
+| [live-model](language/haskell/examples/live-model) | This example connects the Haskell Core to an OpenAI-compatible endpoint through `Praxo.OpenAICompatible`, registers a `get_time(zone)` tool with a small JSON Schema, and restricts the run to `get_time`. |
 | [mcp](language/haskell/examples/mcp) | This example uses a caller-owned in-process transport with the Haskell MCP client. |
 | [provider-fallback](language/haskell/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
 | [representative-chain](language/haskell/examples/representative-chain) | Deterministic representative chain covering MCP record, final-argument authorization, governed child delegation, OTel/Harmovela events, and an edited denial with zero effects. |
 | [retry](language/haskell/examples/retry) | This example retries a transient failure with a bounded attempt count and keeps the exhausted failure state. |
 | [service](language/haskell/examples/service) | This example defines a transport-neutral request handler with health, principal, and run cases. |
-| [session-checkpoint](language/haskell/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns with the Haskell Core `runAgent` loop and checkpoint allowlist helpers. It uses a teaching in-memor... |
+| [session-checkpoint](language/haskell/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns with the Haskell Core `runAgent` loop and checkpoint allowlist helpers. It uses a teaching in-memory store; production storage and retention remain application-owned. |
 | [streaming](language/haskell/examples/streaming) | This example accumulates streamed chunks and checks that they reconstruct the final output. |
 | [structured-output](language/haskell/examples/structured-output) | This example validates a final JSON answer against a schema and rejects invalid output. |
 
@@ -94,9 +94,9 @@ Scenario-oriented tutorials live under `language/haskell/Tutorial`. Planning con
 | --- | --- |
 | [Tutorial](language/haskell/Tutorial) | - [Rule DSL](https://github.com/axisvela/praxo-core/blob/main/language/haskell/Tutorial/rule-dsl/README.md): typed access-rule parsing, allow/deny conflict counterexample and a review-only revision; no policy publication. - [Literature Review (SC-01)](https://github.com/axisvela/praxo-core/blob/main/language/haskell/Tutorial/literature-review/README.md): source Haskell Core, fixed synthetic paper corpus and an explicitly unverified hypothesis draft; no live search or scientific-validity claim. |
 | [literature-review](language/haskell/Tutorial/literature-review) | A bounded first slice of [SC-01](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not autonomous scientific discovery. It searches a fixed synthetic paper corpus, cites the top result, and drafts an explicitly unverified hypothesis. This uses the source Haskell Core through `runghc`; no network, credentials or packages are required beyond GHC. |
-| [policy-simulation](language/haskell/Tutorial/policy-simulation) | A bounded first slice of OG-02, not a policy-prediction engine. It simulates a small fixed synthetic population and drafts a review-only sensitivity report using the source Hask... |
-| [rule-dsl](language/haskell/Tutorial/rule-dsl) | A bounded business-rule validation tutorial. It parses a small access-rule DSL into a typed Haskell structure, detects allow/deny conflicts and returns a counterexample. Core co... |
-| [test-generation](language/haskell/Tutorial/test-generation) | A bounded first slice of SE-04, not a test-execution or load-testing service. It generates three bounded tests for a fixed local fixture and records zero executions. No load tar... |
+| [policy-simulation](language/haskell/Tutorial/policy-simulation) | A bounded first slice of OG-02, not a policy-prediction engine. It simulates a small fixed synthetic population and drafts a review-only sensitivity report using the source Haskell Core through `runghc`. No tens-of-thousands scale, external simulator or real policy prediction. |
+| [rule-dsl](language/haskell/Tutorial/rule-dsl) | A bounded business-rule validation tutorial. It parses a small access-rule DSL into a typed Haskell structure, detects allow/deny conflicts and returns a counterexample. Core consumes that result and drafts a review-only revision. No rule is published or applied. |
+| [test-generation](language/haskell/Tutorial/test-generation) | A bounded first slice of SE-04, not a test-execution or load-testing service. It generates three bounded tests for a fixed local fixture and records zero executions. No load target, network traffic or runtime verification. |
 
 ## Reference Applications
 
@@ -112,6 +112,11 @@ python language/haskell/api-snapshot.py --check
 ```
 
 This mirror contains the language source and the shared `spec/` vectors, so the implementation can be built and tested here. See [`language/haskell/README.md`](language/haskell/README.md) for the exact commands. The monorepo CI runs conformance, API snapshot, and native tests for this implementation.
+
+## Boundaries
+
+Reference application source is not end-to-end portfolio acceptance; follow each README's scope and evidence.
+PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
 
 ## Community
 
@@ -142,6 +147,5 @@ This mirror contains the language source and the shared `spec/` vectors, so the 
 
 This repository is a discovery mirror of the canonical Haskell source. The monorepo remains the source of truth and the release workflow source. The mirror's `main` branch tracks current source, not a release snapshot. Source tags refer to the canonical monorepo and are not necessarily present in this mirror; syncing the branch does not publish mirror tags or registry packages.
 
-PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
 
 MIT licensed.
